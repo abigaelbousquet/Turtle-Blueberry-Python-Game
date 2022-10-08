@@ -54,20 +54,6 @@ berries = []
 bb_x_values = []
 bb_y_values = []
 
-'''
-# TEST TURTLE TO FIND COORDINATES OF TURTLE MOUTH
-turtle_mouth = trtl.Turtle()
-turtle_mouth.goto(-200, 0)
-'''
-
-
-
-
-
-
-
-
-
 ##### FUNCTIONS #####
 def print_directions():
   directions_writer.write("Click on a blueberry to select it. (It may take several tries to get the right berry to respond.)" + "\n" + "Use your arrow keys to change its direction, as well as the 'g' key to move it forward." + "\n" + "Move the blueberries to the turtle's mouth to feed it and earn points!", font=("Arial", 15))
@@ -115,41 +101,24 @@ def move_berry():
   x_position_abs_dif = abs(-200 + (berries[active_berry_index].xcor()))
   y_position_abs_dif = abs(0 - (berries[active_berry_index].ycor()))
   if ((x_position_abs_dif <= 410) and (x_position_abs_dif >= 390)) and (y_position_abs_dif <= 10):
-    '''
-    print("berry reached mouth!")
-    '''
     global score
     score = score + 1
     update_score(score)
     remove_berry()
 
-
 # figure out which berry turtle should be the active berry based on the user's click
 def berry_clicked(x, y):
-  '''
-  print("berry clicked!")
-  '''
   global active_berry_index
   index = 0 # start index at 0 to start at beginning of berries list
 
   for i in berries:
     if abs(x - (bb_x_values[index]) <= 5) and abs(y - (bb_y_values[index]) <= 5):
       active_berry_index = index
-      '''
-      print("active berry index: " + str(active_berry_index))
-      '''
 
     # update index variable for next iteration
     index = index + 1
 
-
-
-
-
-
-
-
-##### CALL FUNCTIONS #####
+##### FUNCTION CALLS #####
 print_directions()
 update_score(score)
 
@@ -161,12 +130,6 @@ for i in range(0, 5):
   new_y = rand.randint(-200, 200)
 
   new_berry(new_x, new_y)
-
-'''
-print(berries)
-print(bb_x_values)
-print(bb_y_values)
-'''
 
 # call the berry_clicked function when the user clicks the screen (hopefully clicking a berry)
 wn.onscreenclick(berry_clicked)
