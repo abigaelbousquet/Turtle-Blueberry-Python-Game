@@ -6,5 +6,5 @@ This program will generate a game where the user can use their mouse, arrow keys
 blueberries to a turtle in order to "feed" it. Successfully feeding the blueberries to the turtle will
 increase their score by 1 each time.
 
-# the blueberries image named blueberries.gif is from clipart-library.com
-# the turtle image named turtle.gif is from clipartbay.com
+the blueberries image named blueberries.gif is from clipart-library.com
+the turtle image named turtle.gif is from clipartbay.com
