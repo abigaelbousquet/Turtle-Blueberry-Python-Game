@@ -7,4 +7,5 @@ blueberries to a turtle in order to "feed" it. Successfully feeding the blueberr
 increase their score by 1 each time.
 
 the blueberries image named blueberries.gif is from clipart-library.com
+
 the turtle image named turtle.gif is from clipartbay.com
